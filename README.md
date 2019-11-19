@@ -22,6 +22,7 @@ java -jar cromwell.jar run sniffles.wdl --inputs inputs.json
 Parameter|Value|Description
 ---|---|---
 `sortedBamFile`|File|Input directory (directory of the nanopore run)
+`outputFileNamePrefix`|String|Variable used to set the outputfile name
 
 
 #### Optional workflow parameters:
