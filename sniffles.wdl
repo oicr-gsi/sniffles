@@ -7,7 +7,7 @@ workflow sniffles {
         String? additionalParameters
     }
     parameter_meta {
-        sortedBamFile: "Input directory (directory of the nanopore run)"
+        sortedBamFile: "Input bam file (must be sorted)"
         outputFileNamePrefix: "Variable used to set the outputfile name"
         additionalParameters: "Additional parameters to be added to the sniffles command"
     }
@@ -44,7 +44,7 @@ task getVCF {
     }
     parameter_meta {
         sniffles: "sniffles module name to use."
-        sortedBamFile: "path to the bam file"
+        sortedBamFile: "Input bam file (must be sorted)"
         modules: "Environment module names and version to load (space separated) before command execution."
         memory: "Memory (in GB) allocated for job."
         outputFileNamePrefix: "Variable used to set the outputfile name"

@@ -21,7 +21,7 @@ java -jar cromwell.jar run sniffles.wdl --inputs inputs.json
 #### Required workflow parameters:
 Parameter|Value|Description
 ---|---|---
-`sortedBamFile`|File|Input directory (directory of the nanopore run)
+`sortedBamFile`|File|Input bam file (must be sorted)
 
 
 #### Optional workflow parameters:
