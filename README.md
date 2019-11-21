@@ -22,20 +22,21 @@ java -jar cromwell.jar run sniffles.wdl --inputs inputs.json
 Parameter|Value|Description
 ---|---|---
 `sortedBamFile`|File|Input directory (directory of the nanopore run)
-`outputFileNamePrefix`|String|Variable used to set the outputfile name
 
 
 #### Optional workflow parameters:
 Parameter|Value|Default|Description
 ---|---|---|---
+`outputFileNamePrefix`|String|basename(sortedBamFile,".bam")|Variable used to set the outputfile name
+`additionalParameters`|String?|None|Additional parameters to be added to the sniffles command
 
 
 #### Optional task parameters:
 Parameter|Value|Default|Description
 ---|---|---|---
-`getVCF.sniffles`|String?|"sniffles"|sniffles module name to use.
-`getVCF.modules`|String?|"sniffles/1.0.11"|Environment module names and version to load (space separated) before command execution.
-`getVCF.memory`|Int?|31|Memory (in GB) allocated for job.
+`getVCF.sniffles`|String|"sniffles"|sniffles module name to use.
+`getVCF.modules`|String|"sniffles/1.0.11"|Environment module names and version to load (space separated) before command execution.
+`getVCF.memory`|Int|31|Memory (in GB) allocated for job.
 
 
 ### Outputs

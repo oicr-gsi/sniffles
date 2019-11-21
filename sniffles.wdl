@@ -3,11 +3,13 @@ version 1.0
 workflow sniffles {
     input {
         File sortedBamFile
-        String outputFileNamePrefix
+        String outputFileNamePrefix = basename(sortedBamFile, ".bam")
+        String? additionalParameters
     }
     parameter_meta {
         sortedBamFile: "Input directory (directory of the nanopore run)"
         outputFileNamePrefix: "Variable used to set the outputfile name"
+        additionalParameters: "Additional parameters to be added to the sniffles command"
     }
 
     meta {
@@ -22,7 +24,8 @@ workflow sniffles {
     call getVCF {
         input:
             sortedBamFile = sortedBamFile,
-            outputFileNamePrefix = outputFileNamePrefix
+            outputFileNamePrefix = outputFileNamePrefix,
+            additionalParameters = additionalParameters
 
     }
     output {
@@ -32,11 +35,12 @@ workflow sniffles {
 
 task getVCF {
     input {
-        String? sniffles = "sniffles"
+        String sniffles = "sniffles"
+        String? additionalParameters
         String outputFileNamePrefix
         File sortedBamFile
-        String? modules = "sniffles/1.0.11"
-        Int? memory = 31
+        String modules = "sniffles/1.0.11"
+        Int memory = 31
     }
     parameter_meta {
         sniffles: "sniffles module name to use."
@@ -44,6 +48,7 @@ task getVCF {
         modules: "Environment module names and version to load (space separated) before command execution."
         memory: "Memory (in GB) allocated for job."
         outputFileNamePrefix: "Variable used to set the outputfile name"
+        additionalParameters: "Additional parameters to be added to the sniffles command"
     }
     meta {
         output_meta : {
@@ -54,6 +59,7 @@ task getVCF {
     command <<<
         ~{sniffles} \
         -m ~{sortedBamFile} \
+        ~{additionalParameters} \
         -v ~{outputFileNamePrefix}_SV.vcf
     >>>
 
