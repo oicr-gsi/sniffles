@@ -20,6 +20,15 @@
           "sniffles.outputFileNamePrefix": "ID_HERE"
         }
       }
+    },
+    {
+      "id": "snifflesEmptyOutputFileNamePrefixTest",
+      "parameters": {
+        "wdl_inputs": {
+          "sniffles.sortedBamFile": "/.mounts/labs/gsi/testdata/sniffles/input_data/aln.sort.bam",
+          "sniffles.outputFileNamePrefix": ""
+        }
+      }
     }
   ]
 }
