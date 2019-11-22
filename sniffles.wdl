@@ -60,11 +60,11 @@ task getVCF {
         ~{sniffles} \
         -m ~{sortedBamFile} \
         ~{additionalParameters} \
-        -v ~{outputFileNamePrefix}_SV.vcf
+        -v ~{outputFileNamePrefix}_sniffles.vcf
     >>>
 
     output {
-        File vcfFile = "~{outputFileNamePrefix}_SV.vcf"
+        File vcfFile = "~{outputFileNamePrefix}_sniffles.vcf"
     }
     runtime {
         modules: "~{modules}"

@@ -16,7 +16,7 @@
       "id": "snifflesTest",
       "parameters": {
         "wdl_inputs": {
-          "sniffles.sortedBamFile": "/.mounts/labs/gsi/testdata/sniffles/input_data/aln.sort.bam",
+          "sniffles.sortedBamFile": "/.mounts/labs/gsi/testdata/sniffles/input_data/alignment.bam",
           "sniffles.outputFileNamePrefix": "ID_HERE"
         }
       }
