@@ -14,8 +14,7 @@ workflow sniffles {
 
     meta {
         author: "Matthew Wong"
-        email: "m2wong@oicr.on.ca"
-        description: "Workflow to run Structural Variant caller"
+        description: "Workflow to run the Structural Variant caller Sniffles on Oxford Nanopore Data"
         dependencies: [{
             name: "Sniffles",
             url: "https://github.com/fritzsedlazeck/Sniffles"
