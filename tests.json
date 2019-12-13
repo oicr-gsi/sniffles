@@ -1,0 +1,33 @@
+{
+  "defaults": {
+    "description": "sniffles workflow test",
+    "metrics_calculate": "calculate.sh",
+    "metrics_compare": "compare.sh",
+    "output_metrics_dir": "/.mounts/labs/gsi/testdata/sniffles/output_metrics",
+    "parameters": {
+      "wdl_options": {
+        "write_to_cache": false,
+        "read_from_cache": false
+      }
+    }
+  },
+  "tests": [
+    {
+      "id": "snifflesTest",
+      "parameters": {
+        "wdl_inputs": {
+          "sniffles.sortedBamFile": "/.mounts/labs/gsi/testdata/sniffles/input_data/alignment.bam",
+          "sniffles.outputFileNamePrefix": "ID_HERE"
+        }
+      }
+    },
+    {
+      "id": "snifflesEmptyOutputFileNamePrefixTest",
+      "parameters": {
+        "wdl_inputs": {
+          "sniffles.sortedBamFile": "/.mounts/labs/gsi/testdata/sniffles/input_data/aln.sort.bam"
+        }
+      }
+    }
+  ]
+}
