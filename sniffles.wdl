@@ -40,6 +40,7 @@ task getVCF {
         File sortedBamFile
         String modules = "sniffles/1.0.11"
         Int memory = 31
+        Int timeout = 24
     }
     parameter_meta {
         sniffles: "sniffles module name to use."
@@ -47,6 +48,7 @@ task getVCF {
         modules: "Environment module names and version to load (space separated) before command execution."
         memory: "Memory (in GB) allocated for job."
         outputFileNamePrefix: "Variable used to set the outputfile name"
+        timeout: "Runtime for the job in hours."
         additionalParameters: "Additional parameters to be added to the sniffles command"
     }
     meta {
@@ -68,5 +70,6 @@ task getVCF {
     runtime {
         modules: "~{modules}"
         memory: "~{memory} G"
+        timeout: "~{timeout}"
     }
 }

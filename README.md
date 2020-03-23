@@ -37,6 +37,7 @@ Parameter|Value|Default|Description
 `getVCF.sniffles`|String|"sniffles"|sniffles module name to use.
 `getVCF.modules`|String|"sniffles/1.0.11"|Environment module names and version to load (space separated) before command execution.
 `getVCF.memory`|Int|31|Memory (in GB) allocated for job.
+`getVCF.timeout`|Int|24|Runtime for the job in hours.
 
 
 ### Outputs
