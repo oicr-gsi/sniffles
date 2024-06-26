@@ -19,6 +19,12 @@ workflow sniffles {
             name: "Sniffles",
             url: "https://github.com/fritzsedlazeck/Sniffles"
         }]
+        output_meta: {
+          vcfFile: {
+            description: "VCF file with Structural Variant predictions.",
+            vidarr_label: "vcfFile"
+          }
+        }
     }
     call getVCF {
         input:
