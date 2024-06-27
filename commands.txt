@@ -1,0 +1,14 @@
+## Commands
+
+This section lists command(s) run by sniffles workflow
+
+* Running sniffles
+
+Sniffles workflow runs a single task, SV variant calling with sniffles using nanopore data as an input.
+
+```
+   sniffles \
+   -m SORTED_BAM_FILE \
+   ADDITIONAL_PARAMETERS \
+   -v OUTPUT_PREFIX_sniffles.vcf
+```
