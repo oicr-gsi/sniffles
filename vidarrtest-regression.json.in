@@ -21,7 +21,10 @@
             }
         },
         "description": "sniffles workflow test",
-        "engineArguments": {},
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
         "id": "snifflesTest",
         "metadata": {
             "sniffles.vcfFile": {
@@ -64,7 +67,10 @@
             }
         },
         "description": "sniffles workflow test",
-        "engineArguments": {},
+        "engineArguments": {
+           "write_to_cache": false,
+           "read_from_cache": false
+        },
         "id": "snifflesEmptyOutputFileNamePrefixTest",
         "metadata": {
             "sniffles.vcfFile": {
