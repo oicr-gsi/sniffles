@@ -9,7 +9,7 @@
             "sniffles.outputFileNamePrefix": "ID_HERE",
             "sniffles.sortedBamFile": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/sniffles/input_data/alignment.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/sniffles/test_inputs/alignment.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -40,7 +40,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/sniffles/output_metrics/snifflesTest.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/sniffles/output_metrics/workflow_test_01.metrics",
                 "type": "script"
             }
         ]
@@ -55,7 +55,7 @@
             "sniffles.outputFileNamePrefix": null,
             "sniffles.sortedBamFile": {
                 "contents": {
-                    "configuration": "/.mounts/labs/gsi/testdata/sniffles/input_data/aln.sort.bam",
+                    "configuration": "/.mounts/labs/gsi/testdata/sniffles/test_inputs/aln.sort.bam",
                     "externalIds": [
                         {
                             "id": "TEST",
@@ -86,7 +86,7 @@
             {
                 "metrics_calculate": "@CHECKOUT@/tests/calculate.sh",
                 "metrics_compare": "@CHECKOUT@/tests/compare.sh",
-                "output_metrics": "/.mounts/labs/gsi/testdata/sniffles/output_metrics/snifflesEmptyOutputFileNamePrefixTest.metrics",
+                "output_metrics": "/.mounts/labs/gsi/testdata/sniffles/output_metrics/workflow_test_02.metrics",
                 "type": "script"
             }
         ]
